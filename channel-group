@@ -1,0 +1,9 @@
+CASE 
+ WHEN First user default channel group="Direct" THEN "Direct + acd" 
+ WHEN First user default channel group="Referral" THEN "Referral" 
+ WHEN First user default channel group="Organic Search" THEN "Organic Search"
+ WHEN First user default channel group="Display" OR First user source="Google Ads" OR First user source="Facebook Ads" THEN "Ads"
+ WHEN First user default channel group="Organic Social" THEN "Organic Social"
+ WHEN First user source="customer.io" THEN "Customer.io"
+ ELSE "Other"
+ END
